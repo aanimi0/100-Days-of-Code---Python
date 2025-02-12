@@ -6,4 +6,13 @@ states_of_america = ["Delaware", "Pennsylvania", "New Jersey", "Georgia", "Conne
                      "North Dakota", "South Dakota", "Montana", "Washington", "Idaho", "Wyoming", "Utah", "Oklahoma",
                      "New Mexico", "Arizona", "Alaska", "Hawaii"]
 
-print(states_of_america)
+#print(len(states_of_america))
+#print(states_of_america[49])
+#Nested list
+shirts = ["Shirt1","Shirt2","Shirt3"]
+boots = ["Nike","Adidas","NewBalance"]
+
+clothing = [shirts,boots]
+
+print(clothing[1])
+
