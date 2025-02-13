@@ -10,9 +10,9 @@ nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
 
-rangeOfLetters = range(1,nr_letters+1)
-rangeOfSymbols = range(1,nr_symbols+1)
-rangeOfNumbers = range(1,nr_numbers+1)
+rangeOfLetters = range(0,nr_letters)
+rangeOfSymbols = range(0,nr_symbols)
+rangeOfNumbers = range(0,nr_numbers)
 
 
 lettersGenerated = []
@@ -31,7 +31,12 @@ for num in rangeOfNumbers:
 passwordGenerated = lettersGenerated + symbolsGenerated + numbersGenerated
 random.shuffle(passwordGenerated)
 
-delimiter = ""
-passwordString = delimiter.join(passwordGenerated)
+# delimiter = ""
+# passwordString = delimiter.join(passwordGenerated)
+
+passwordString = ""
+
+for char in passwordGenerated:
+    passwordString += char
 
 print(f"Password is: {passwordString}")
