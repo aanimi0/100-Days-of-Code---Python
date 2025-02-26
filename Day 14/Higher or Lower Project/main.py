@@ -8,6 +8,7 @@ def generate_details():
     return choice
 
 def calculate_answer(a_list,b_list):
+    """Take the lists for A and B and returns which one is the highest one"""
     a_follower_count = 0
     b_follower_count = 0
 
@@ -49,12 +50,15 @@ while game_on:
 
     print(vs)
 
-    print(f"Compare B: {b_name}, {b_description}, from {b_country}")
+    print(f"Against B: {b_name}, {b_description}, from {b_country}")
 
     user_input = input("Who has more followers? Type 'A' or 'B':").upper()
 
     if user_input == correct_answer:
-        a_dict = b_dict
+        if correct_answer == 'B':
+            a_dict = b_dict
+        else:
+            a_dict = a_dict
         b_dict = generate_details()
         score += 1
         print(f"You are right! Current score: {score}")
